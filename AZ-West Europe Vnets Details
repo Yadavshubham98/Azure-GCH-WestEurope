@@ -65,3 +65,7 @@ gch-snet-weu-dev-digital-private-01	10.251.150.0/26
 gch-snet-weu-dev-digital-public-01	10.251.150.64/26
 gch-snet-weu-dev-digital-db-01	10.251.150.128/26
 FREE	10.251.150.192/26
+
+
+**********************************************************************************NEWLY created Subscription for infosec ******************
+127a1a99-4e48-4b64-b7a2-4e351019163f    GCH-Security                    NSG Flow logs to be enabled centrally in this account....
