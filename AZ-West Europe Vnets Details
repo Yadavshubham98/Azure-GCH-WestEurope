@@ -1,0 +1,67 @@
+gch-weu-shared-Connectivity	10.251.128.0/23	23
+gch-weu-shared-management	10.251.130.0/23	23
+gch-weu-prod-shared-Identity	10.251.132.0/23	23
+FREE		23
+gch-weu-prod-bts	10.251.136.0/22	22
+gch-weu-prod-bts		
+gch-weu-uat-bts	10.251.140.0/23	23
+gch-weu-dev-bts	10.251.142.0/23	23
+gch-weu-prod-digital	10.251.144.0/22	22
+gch-weu-prod-digital		
+gch-weu-uat-digital	10.251.148.0/23	23
+gch-weu-dev-digital	10.251.150.0/23	23
+FREE		23
+gch-weu-dev-management	10.251.154.0/23	23
+
+FREE		23
+gch-weu-shared-vWAN (v WAN)	10.251.186.0/23	23
+gch-weu-shared-security (pa vnet)	10.251.188.0/23	23
+gch-weu-shared-internet (Zscaler vnet)	10.251.190.0/23	23
+
+
+gch-weu-prod-shared-mgmt-private-01	10.251.130.0/26
+gch-weu-prod-shared-mgmt-public-01	10.251.130.64/26
+gch-weu-prod-shared-mgmt-db-01	10.251.130.128/26
+FREE	10.251.130.192/26
+gch-weu-dev-shared-mgmt-private-01	10.251.131.0/26
+gch-weu-dev-shared-mgmt-public-01	10.251.131.64/26
+gch-weu-dev-shared-mgmt-db-01	10.251.131.128/26
+FREE	10.251.131.192/26
+
+gch-weu-prod-shared-Identity-private-01	10.251.132.0/26
+gch-weu-prod-shared-Identity-public-01	10.251.132.64/26
+gch-weu-prod-shared-Identity-db-01	10.251.132.128/26
+FREE	10.251.132.192/26
+gch-weu-dev-shared-Identity-private-01	10.251.133.0/26
+gch-weu-dev-shared-Identity-public-01	10.251.133.64/26
+gch-weu-dev-shared-Identity-db-01	10.251.133.128/26
+FREE	10.251.133.192/26
+
+gch-snet-weu-prod-bts-private-01	10.251.136.0/26
+gch-snet-weu-prod-bts-public-01	10.251.136.64/26
+gch-snet-weu-prod-bts-db-01	10.251.136.128/26
+
+gch-snet-weu-uat-bts-private-01	10.251.140.0/26
+gch-snet-weu-uat-bts-public-01	10.251.140.64/26
+gch-snet-weu-uat-bts-db-01	10.251.140.128/26
+FREE	10.251.140.192/26
+
+gch-snet-weu-dev-bts-private-01	10.251.142.0/26
+gch-snet-weu-dev-bts-public-01	10.251.142.64/26
+gch-snet-weu-dev-bts-db-01	10.251.142.128/26
+FREE	10.251.142.192/26
+
+gch-snet-weu-prod-digital-private-01	10.251.144.0/26
+gch-snet-weu-prod-digital-public-01	10.251.144.64/26
+gch-snet-weu-prod-digital-db-01	10.251.144.128/26
+FREE	10.251.144.192/26
+
+gch-snet-weu-uat-digital-private-01	10.251.148.0/26
+gch-snet-weu-uat-digital-public-01	10.251.148.64/26
+gch-snet-weu-uat-digital-db-01	10.251.148.128/26
+FREE	10.251.148.192/26
+
+gch-snet-weu-dev-digital-private-01	10.251.150.0/26
+gch-snet-weu-dev-digital-public-01	10.251.150.64/26
+gch-snet-weu-dev-digital-db-01	10.251.150.128/26
+FREE	10.251.150.192/26
