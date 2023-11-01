@@ -69,3 +69,7 @@ FREE	10.251.150.192/26
 
 **********************************************************************************NEWLY created Subscription for infosec ******************
 127a1a99-4e48-4b64-b7a2-4e351019163f    GCH-Security                    NSG Flow logs to be enabled centrally in this account....
+
+
+
+ az network vnet subnet update --name 'gch-snet-weu-prod-identity-private-01' --resource-group 'gch-rg-weu-prod-shared-identity-core-network' --vnet-name 'gch-weu-prod-identity' --service-endpoints Microsoft.Storage
