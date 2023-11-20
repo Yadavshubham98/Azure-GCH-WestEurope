@@ -1,0 +1,14 @@
+privatelink.adf.azure.com
+privatelink.api.azureml.ms
+privatelink.azure-automation.net
+privatelink.azurewebsites.net
+privatelink.blob.core.windows.net
+privatelink.database.windows.net
+privatelink.datafactory.azure.net
+privatelink.file.core.windows.net
+privatelink.openai.azure.com
+privatelink.queue.core.windows.net
+privatelink.search.windows.net
+privatelink.vaultcore.azure.net
+privatelink.web.core.windows.net
+privatelink.web.core.windows.net
