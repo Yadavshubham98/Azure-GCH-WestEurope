@@ -145,7 +145,10 @@ resource "azurerm_subnet" "gch-weu-dev-management-subnet" {
   virtual_network_name = azurerm_virtual_network.gch-weu-dev-shared-management.name                //dev subnet will be inside prod vnet
   address_prefixes     = [local.weu-dev-management-subnet_address_prefixes[count.index]]
   lifecycle {
-    ignore_changes = [service_endpoints]
+    ignore_changes = [
+      service_endpoints,
+      enforce_private_link_endpoint_network_policies,
+    ]
   }
 }
 

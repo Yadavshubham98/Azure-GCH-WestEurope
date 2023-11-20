@@ -338,3 +338,12 @@ resource "azurerm_resource_group" "weu-security-logs-rgs" {
   location = var.location-weu
   tags     = local.security_subscription_tags[local.security-subscription-rg[count.index]]
 }
+
+
+resource "azurerm_resource_group" "weu-private-dns-zone-rgs" {
+  provider = azurerm.weu-identity-sub
+  count    = length(local.private-dns-zone-rg)
+  name     = local.private-dns-zone-rg[count.index]
+  location = var.location-weu
+  tags     = local.private_dns_zone_tags[local.private-dns-zone-rg[count.index]]
+}

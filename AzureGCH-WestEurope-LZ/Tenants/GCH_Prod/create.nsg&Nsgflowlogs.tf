@@ -43,7 +43,7 @@ resource "azurerm_network_security_group" "weu-prod-management-subnet-nsg" {
 
     ]
   }
-  
+
 }
 
 data "azurerm_network_watcher" "nwatchermanagement" {
@@ -82,13 +82,13 @@ resource "azurerm_network_watcher_flow_log" "gch-snet-weu-prod-management-NSG-fl
     interval_in_minutes   = 10
   }
   tags = local.security_subscription_tags[local.security-subscription-rg[0]]
-  
+
   lifecycle {
     ignore_changes = [
       location,
     ]
   }
-  
+
 }
 
 
@@ -132,7 +132,7 @@ resource "azurerm_network_security_group" "weu-dev-management-subnet-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 
@@ -209,7 +209,7 @@ resource "azurerm_network_security_group" "weu-prod-identity-subnet-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 data "azurerm_network_watcher" "nwatcheridentity" {
@@ -314,7 +314,7 @@ resource "azurerm_network_security_group" "weu-prod-bts-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 data "azurerm_network_watcher" "nwatcherprodeu" {
@@ -351,7 +351,7 @@ resource "azurerm_network_watcher_flow_log" "gch-snet-weu-prod-bts-NSG-flowlog" 
     ignore_changes = [
       location,
     ]
-  }  
+  }
 }
 
 
@@ -394,7 +394,7 @@ resource "azurerm_network_security_group" "weu-prod-digital-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 resource "azurerm_network_watcher_flow_log" "gch-snet-weu-prod-digital-NSG-flowlog" {
@@ -468,7 +468,7 @@ resource "azurerm_network_security_group" "weu-dev-bts-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 
@@ -550,7 +550,7 @@ resource "azurerm_network_security_group" "weu-dev-digital-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 
@@ -628,7 +628,7 @@ resource "azurerm_network_security_group" "weu-uat-bts-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 
@@ -711,7 +711,7 @@ resource "azurerm_network_security_group" "weu-uat-digital-nsg" {
       security_rule,
     ]
   }
-  
+
 }
 
 resource "azurerm_network_watcher_flow_log" "gch-snet-weu-uat-digital-NSG-flowlog" {

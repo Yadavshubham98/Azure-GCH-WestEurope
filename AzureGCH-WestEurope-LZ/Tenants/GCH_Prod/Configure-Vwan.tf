@@ -16,7 +16,7 @@ resource "azurerm_virtual_hub" "gch-weu-prod-hub" {
   virtual_wan_id      = data.azurerm_virtual_wan.euswan.id
   address_prefix      = "10.251.186.0/23"
   tags                = local.prod_shared_network_tags
-  lifecycle  {
+  lifecycle {
     ignore_changes = [
       virtual_wan_id,
     ]
@@ -32,7 +32,7 @@ resource "azurerm_virtual_hub_connection" "vhub-weu-prod-shared-management" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-prod-shared-management.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -46,7 +46,7 @@ resource "azurerm_virtual_hub_connection" "vhub-weu-dev-shared-management" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-dev-shared-management.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -59,7 +59,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-prod-shared-identity" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-prod-shared-identity.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -73,7 +73,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-prod-digital" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-prod-digital.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -84,7 +84,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-prod-bts" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-prod-bts.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -95,7 +95,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-dev-bts" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-dev-bts.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -106,7 +106,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-dev-digital" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-dev-digital.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -117,7 +117,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-uat-bts" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-uat-bts.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -128,7 +128,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-uat-digital" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-uat-digital.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -142,7 +142,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-shared-security" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-shared-connectivity.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }
@@ -154,7 +154,7 @@ resource "azurerm_virtual_hub_connection" "vhub-gch-weu-shared-internet" {
   remote_virtual_network_id = azurerm_virtual_network.gch-weu-shared-internet.id
   lifecycle {
     ignore_changes = [
-      remote_virtual_network_id,  
+      remote_virtual_network_id,
       internet_security_enabled,
     ]
   }

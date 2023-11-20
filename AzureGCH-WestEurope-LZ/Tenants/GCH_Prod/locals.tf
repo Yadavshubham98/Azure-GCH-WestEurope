@@ -134,8 +134,8 @@ locals {
   ind-bootdiag-rgs = ["gch-rg-ind-prod-shared-boot-diag", "gch-rg-ind-dev-shared-boot-diag", "gch-rg-ind-prod-digital-boot-diag", "gch-rg-ind-prod-bts-boot-diag", "gch-rg-ind-dev-digital-boot-diag", "gch-rg-ind-dev-bts-boot-diag"]
 
   //Resource Groups for Prod Regional Log Analytics
-  security-subscription-rg = ["gch-rg-weu-prod-shared-security-analytics-log", "gch-rg-weu-dev-shared-security-analytics-log",  "gch-rg-weu-prod-shared-flowlog-storage", "gch-rg-weu-dev-shared-flowlog-storage"]
-
+  security-subscription-rg   = ["gch-rg-weu-prod-shared-security-analytics-log", "gch-rg-weu-dev-shared-security-analytics-log", "gch-rg-weu-prod-shared-flowlog-storage", "gch-rg-weu-dev-shared-flowlog-storage"]
+  private-dns-zone-rg        = ["gch-rg-weu-shared-private-dns-zone"]
   all-regions-laworkspace-rg = ["gch-rg-ind-prod-shared-manssagement-core-log", "gch-rg-neu-prod-shared-management-core-log", "gch-rg-weu-prod-shared-management-core-log", "gch-rg-wus-prod-shared-management-core-log"]
 
 }
@@ -308,7 +308,7 @@ locals {
 }
 
 locals {
-  dns_zones = ["privatelink.blob.core.windows.net", "privatelink.database.windows.net", "privatelink.file.core.windows.net", "privatelink.vaultcore.azure.net"]
+  dns_zones = ["privatelink.blob.core.windows.net", "privatelink.database.windows.net", "privatelink.file.core.windows.net", "privatelink.vaultcore.azure.net", "privatelink.adf.azure.com", "privatelink.api.azureml.ms", "privatelink.azure-automation.net", "privatelink.azurewebsites.net", "privatelink.datafactory.azure.net", "privatelink.openai.azure.com", "privatelink.queue.core.windows.net", "privatelink.search.windows.net", "privatelink.web.core.windows.net"]
 }
 
 
@@ -481,21 +481,21 @@ locals {
 
   }
   prod-lmc-vm-tags = {
-    "ApplicationSupport" = "genpactnmgtoolsteam@genpact.com"
-      "OwnerSupervisor"    = "Steven.Zhang@genpact.com"
-      "Owner"              = "venkataganeshbabu.k@genpact.com"
-      "ProjectName"        = "GCH Europe Azure Landing Zone"
-      "BusinessVertical"   = "CorpIT"
-      "SDOCode"            = "8561"
-      "CCCode"             = "180"
-      "ProvisioningSR"     = "CHG0079549"
-      "PID"                = "shared"
-      "Department"         = "shared"
-      "Stack"              = "Prod"
-      "ProvisionedBy"      = "Terraform"
-      "supportcost"        = "$"
-      "ServiceType"         = "IAAS"
-      "Backup"              = "Daily"
+    "ApplicationSupport"  = "genpactnmgtoolsteam@genpact.com"
+    "OwnerSupervisor"     = "Steven.Zhang@genpact.com"
+    "Owner"               = "venkataganeshbabu.k@genpact.com"
+    "ProjectName"         = "GCH Europe Azure Landing Zone"
+    "BusinessVertical"    = "CorpIT"
+    "SDOCode"             = "8561"
+    "CCCode"              = "180"
+    "ProvisioningSR"      = "CHG0079549"
+    "PID"                 = "shared"
+    "Department"          = "shared"
+    "Stack"               = "Prod"
+    "ProvisionedBy"       = "Terraform"
+    "supportcost"         = "$"
+    "ServiceType"         = "IAAS"
+    "Backup"              = "Daily"
     "DeploymentType"      = "NN"
     "Exception"           = "No"
     "InstanceSchedule"    = "24*7"
@@ -504,21 +504,21 @@ locals {
   }
 
   prod-jump-vm-tags = {
-    "ApplicationSupport" = "genpactcloudsupport@genpact.com"
-      "OwnerSupervisor"    = "santhosh.srihari@genpact.com"
-      "Owner"              = "Ankur.Singhal@genpact.com"
-      "ProjectName"        = "GCH Europe Azure Landing Zone"
-      "BusinessVertical"   = "CorpIT"
-      "SDOCode"            = "8561"
-      "CCCode"             = "180"
-      "ProvisioningSR"     = "CHG0079549"
-      "PID"                = "shared"
-      "Department"         = "shared"
-      "Stack"              = "Prod"
-      "ProvisionedBy"      = "Terraform"
-      "supportcost"        = "$"
-      "ServiceType"         = "IAAS"
-      "Backup"              = "Daily"
+    "ApplicationSupport"  = "genpactcloudsupport@genpact.com"
+    "OwnerSupervisor"     = "santhosh.srihari@genpact.com"
+    "Owner"               = "Ankur.Singhal@genpact.com"
+    "ProjectName"         = "GCH Europe Azure Landing Zone"
+    "BusinessVertical"    = "CorpIT"
+    "SDOCode"             = "8561"
+    "CCCode"              = "180"
+    "ProvisioningSR"      = "CHG0079549"
+    "PID"                 = "shared"
+    "Department"          = "shared"
+    "Stack"               = "Prod"
+    "ProvisionedBy"       = "Terraform"
+    "supportcost"         = "$"
+    "ServiceType"         = "IAAS"
+    "Backup"              = "Daily"
     "DeploymentType"      = "NN"
     "Exception"           = "No"
     "InstanceSchedule"    = "24*7"
@@ -527,21 +527,21 @@ locals {
   }
 
   dev-jump-vm-tags = {
-    "ApplicationSupport" = "genpactcloudsupport@genpact.com"
-      "OwnerSupervisor"    = "santhosh.srihari@genpact.com"
-      "Owner"              = "Ankur.Singhal@genpact.com"
-      "ProjectName"        = "GCH Europe Azure Landing Zone"
-      "BusinessVertical"   = "CorpIT"
-      "SDOCode"            = "8561"
-      "CCCode"             = "180"
-      "ProvisioningSR"     = "CHG0079549"
-      "PID"                = "shared"
-      "Department"         = "shared"
-      "Stack"              = "Dev"
-      "ProvisionedBy"      = "Terraform"
-      "supportcost"        = "$"
-      "ServiceType"         = "IAAS"
-      "Backup"              = "Daily"
+    "ApplicationSupport"  = "genpactcloudsupport@genpact.com"
+    "OwnerSupervisor"     = "santhosh.srihari@genpact.com"
+    "Owner"               = "Ankur.Singhal@genpact.com"
+    "ProjectName"         = "GCH Europe Azure Landing Zone"
+    "BusinessVertical"    = "CorpIT"
+    "SDOCode"             = "8561"
+    "CCCode"              = "180"
+    "ProvisioningSR"      = "CHG0079549"
+    "PID"                 = "shared"
+    "Department"          = "shared"
+    "Stack"               = "Dev"
+    "ProvisionedBy"       = "Terraform"
+    "supportcost"         = "$"
+    "ServiceType"         = "IAAS"
+    "Backup"              = "Daily"
     "DeploymentType"      = "NN"
     "Exception"           = "No"
     "InstanceSchedule"    = "24*7"
@@ -549,49 +549,49 @@ locals {
     "ScheduleforDeletion" = "No"
   }
   okta-vm-tags = {
-    "ApplicationSupport" = "GenpactOktaAdmins@genpactonline.onmicrosoft.com"
-      "OwnerSupervisor"    = "pankaj.chugh@genpact.com"
-      "Owner"              = "chandrasekhar.babu@genpact.com"
-      "ProjectName"        = "GCH Europe Azure Landing Zone"
-      "BusinessVertical"   = "CorpIT"
-      "SDOCode"            = "8561"
-      "CCCode"             = "180"
-      "ProvisioningSR"     = "CHG0079549"
-      "PID"                = "shared"
-      "Department"         = "shared"
-      "Stack"              = "Prod"
-      "ProvisionedBy"      = "Terraform"
-      "supportcost"        = "$"
-      "ServiceType"         = "IAAS"
-      "Backup"              = "Daily"
+    "ApplicationSupport"  = "GenpactOktaAdmins@genpactonline.onmicrosoft.com"
+    "OwnerSupervisor"     = "pankaj.chugh@genpact.com"
+    "Owner"               = "chandrasekhar.babu@genpact.com"
+    "ProjectName"         = "GCH Europe Azure Landing Zone"
+    "BusinessVertical"    = "CorpIT"
+    "SDOCode"             = "8561"
+    "CCCode"              = "180"
+    "ProvisioningSR"      = "CHG0079549"
+    "PID"                 = "shared"
+    "Department"          = "shared"
+    "Stack"               = "Prod"
+    "ProvisionedBy"       = "Terraform"
+    "supportcost"         = "$"
+    "ServiceType"         = "IAAS"
+    "Backup"              = "Daily"
     "DeploymentType"      = "NN"
     "Exception"           = "No"
     "InstanceSchedule"    = "24*7"
     "RI"                  = "TBD"
     "ScheduleforDeletion" = "No"
   }
-  ad-vm-tags ={
-    "ApplicationSupport" = "GenpactWintelL3SupportTeam@genpact.com"
-      "OwnerSupervisor"    = "vinay.goel@genpact.com"
-      "Owner"              = "pavnesh.kumar@genpact.com"
-      "ProjectName"        = "GCH Europe Azure Landing Zone"
-      "BusinessVertical"   = "CorpIT"
-      "SDOCode"            = "8561"
-      "CCCode"             = "180"
-      "ProvisioningSR"     = "CHG0079549"
-      "PID"                = "shared"
-      "Department"         = "shared"
-      "Stack"              = "Prod"
-      "ProvisionedBy"      = "Terraform"
-      "supportcost"        = "$"
-      "ServiceType"         = "IAAS"
-      "Backup"              = "Daily"
+  ad-vm-tags = {
+    "ApplicationSupport"  = "GenpactWintelL3SupportTeam@genpact.com"
+    "OwnerSupervisor"     = "vinay.goel@genpact.com"
+    "Owner"               = "pavnesh.kumar@genpact.com"
+    "ProjectName"         = "GCH Europe Azure Landing Zone"
+    "BusinessVertical"    = "CorpIT"
+    "SDOCode"             = "8561"
+    "CCCode"              = "180"
+    "ProvisioningSR"      = "CHG0079549"
+    "PID"                 = "shared"
+    "Department"          = "shared"
+    "Stack"               = "Prod"
+    "ProvisionedBy"       = "Terraform"
+    "supportcost"         = "$"
+    "ServiceType"         = "IAAS"
+    "Backup"              = "Daily"
     "DeploymentType"      = "NN"
     "Exception"           = "No"
     "InstanceSchedule"    = "24*7"
     "RI"                  = "TBD"
     "ScheduleforDeletion" = "No"
-    }
+  }
 
   paas_tags = {
     "Exception"           = "No"
@@ -1337,6 +1337,27 @@ locals {
       "supportcost"        = "$"
     }
 
+  }
+}
+
+
+locals {
+  private_dns_zone_tags = {
+    gch-rg-weu-shared-private-dns-zone = {
+      "ApplicationSupport" = "genpactcloudsupport@genpact.com"
+      "OwnerSupervisor"    = "santhosh.srihari@genpact.com"
+      "Owner"              = "anandarao.veyyakula@genpact.com"
+      "ProjectName"        = "GCH Europe Azure Landing Zone"
+      "BusinessVertical"   = "CorpIT"
+      "SDOCode"            = "8561"
+      "CCCode"             = "180"
+      "ProvisioningSR"     = "CHG0079549"
+      "PID"                = "shared"
+      "Department"         = "shared"
+      "Stack"              = "shared"
+      "ProvisionedBy"      = "Terraform"
+      "supportcost"        = "$"
+    }
   }
 }
 //********************************************

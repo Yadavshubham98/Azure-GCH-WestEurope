@@ -85,6 +85,11 @@ resource "azurerm_key_vault" "gchakvweuubtsencrypt10" {
       "DeleteIssuers"
     ]
   }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
+    ]
+  }
 }
 
 # resource "azurerm_subnet_service_endpoint_policy" "gch-weu-uat-digital-subnet-priv-endpoints" {
@@ -162,7 +167,11 @@ resource "azurerm_key_vault" "gchakvweuudigitalencrypt10" {
       "DeleteIssuers"
     ]
   }
-
+  lifecycle {
+    ignore_changes = [
+      access_policy,
+    ]
+  }
 }
 
 
@@ -238,6 +247,11 @@ resource "azurerm_key_vault" "gchakvweupbtsencrypt10" {
       "ListIssuers",
       "SetIssuers",
       "DeleteIssuers"
+    ]
+  }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
     ]
   }
 }
@@ -317,6 +331,11 @@ resource "azurerm_key_vault" "gchakvweupdigitalencrypt10" {
       "DeleteIssuers"
     ]
   }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
+    ]
+  }
 
 }
 
@@ -389,7 +408,11 @@ resource "azurerm_key_vault" "gchakvweupsecencrypt10" {
       "DeleteIssuers"
     ]
   }
-
+  lifecycle {
+    ignore_changes = [
+      access_policy,
+    ]
+  }
 }
 
 # resource "azurerm_subnet_service_endpoint_policy" "gch-weu-prod-management-subnet-priv-endpoints" {
@@ -464,6 +487,11 @@ resource "azurerm_key_vault" "gchakvweupmgmtencrypt10" {
       "ListIssuers",
       "SetIssuers",
       "DeleteIssuers"
+    ]
+  }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
     ]
   }
 
@@ -545,6 +573,11 @@ resource "azurerm_key_vault" "gchakvweudmgmtencrypt10" {
       "DeleteIssuers"
     ]
   }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
+    ]
+  }
 }
 
 
@@ -623,6 +656,11 @@ resource "azurerm_key_vault" "gchakvweudbtsencrypt10" {
       "DeleteIssuers"
     ]
   }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
+    ]
+  }
 }
 
 
@@ -699,6 +737,11 @@ resource "azurerm_key_vault" "gchakvweuddigitalencrypt10" {
       "ListIssuers",
       "SetIssuers",
       "DeleteIssuers"
+    ]
+  }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
     ]
   }
 }
@@ -780,6 +823,11 @@ resource "azurerm_key_vault" "gchakvweupidencrypt10" {
       "DeleteIssuers"
     ]
   }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
+    ]
+  }
 
 }
 
@@ -849,6 +897,11 @@ resource "azurerm_key_vault" "gchakvweudidencrypt10" {
       "ListIssuers",
       "SetIssuers",
       "DeleteIssuers"
+    ]
+  }
+  lifecycle {
+    ignore_changes = [
+      access_policy,
     ]
   }
 }
